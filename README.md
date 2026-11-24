@@ -7,8 +7,17 @@ Author: Igors Subočs (77186)
 
 - `sort.c` – insertion sort and shell sort in C
 - `sort.py` – the same sorts in Python
-- `run_all.sh` – runs both programs 10 times
-- `result.txt` – raw results used in the paper
+- `run_all.sh` – runs all tests
+- `results.txt` – C (-O2) and Python results
+- `results_O0.txt` – C results without optimization (-O0)
+
+## Tests
+
+- Data: reversed, random, nearly sorted
+- Sizes: 1000, 2000, 4000, 8000, 16000
+- C repeats each sort 100 times, Python 10 times; the average is printed
+- Each line ends with OK if the array was sorted correctly
+- Everything is run 10 times; the paper uses the median
 
 ## Requirements
 
@@ -20,4 +29,4 @@ gcc or clang, Python 3. No extra libraries.
 bash run_all.sh
 ```
 
-Takes about 10 minutes. Results are saved to `result.txt`.
+Takes about 25 minutes.
